@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<iostream>
-//#include<string>
+#include<string>
 #define maxsize 10
 using namespace std;
 
