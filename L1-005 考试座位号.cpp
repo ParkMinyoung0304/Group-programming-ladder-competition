@@ -1,31 +1,28 @@
 #include<iostream>
 #include<cstring>
 using namespace std;
-int n,m,tem[1005];
-struct point 
-{   
+int count;
+struct point{
     string id;
-    int b;
+    int kaoshi_num;
 };
-point num[1005];
-int main()
-{
-    point temm;
-    int a;
-    cin>>n;
-    for(int i=1;i<=n;i++)
-    {
-        cin>>temm.id>>a>>temm.b;
-        num[a]=temm;
+int main(){
+    cin>>count;
+    point stu;
+    point num[1005];
+    int shiji_num;
+    for(int i = 0;i<count;i++){
+        cin>>stu.id>>shiji_num>>stu.kaoshi_num;
+        num[shiji_num] = stu;
     }
-    cin>>m;
-    for(int i=1;i<=m;i++)
-    {
-        cin>>tem[i];
+    int search_count;
+    int tem[1005];
+    cin>>search_count;
+    for(int j=0;j<search_count;j++){
+        cin>>tem[j];
     }
-    for(int i=1;i<=m;i++)
-    {
-        cout<<num[tem[i]].id<<" "<<num[tem[i]].b<<endl;
+    for(int k=0;k<search_count;k++){
+        cout<<num[tem[k]].id<<" "<<num[tem[k]].kaoshi_num<<endl;
     }
     return 0;
 }
